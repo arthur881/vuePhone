@@ -19,8 +19,6 @@
   
   max-width: 400px;
   margin: 0 auto;
-  background-color: #d6d5d5;
-
 }
 
 nav {

@@ -5,7 +5,7 @@
         <h2>Contacts :</h2>
         <p v-if="contacts.length == 0">No contact yet :/</p>
 
-        <input type="text" placeholder="search contact name" v-model="searchTerm" @keyup="searchContact">
+        <input class="inputTxt" type="text" placeholder="Search contact name" v-model="searchTerm" @keyup="searchContact">
         <p v-if="this.err == true">Not found</p>
         <div>
             <ul>
@@ -89,4 +89,44 @@ export default {
         flex-direction: column;
         align-items: center;
     }
+    .inputTxt {
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 10px;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .inputTxt:focus {
+        outline: none;
+        box-shadow: 0.2rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2), 0.1rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    }
+    button {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 10px;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    button:hover {
+        cursor: pointer;
+        box-shadow: 0.2rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2), 0.1rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
 </style>
